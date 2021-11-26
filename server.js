@@ -4,7 +4,15 @@ const sequelize = require('./config/connection');
 const app = express();
 // use Heroku's process.env.PORT value when deployed and 3001 when run locally
 const PORT = process.env.PORT || 3001;
+const path = require('path'); 
 
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({});
+
+
+app.use(express.static(path.join(__dirname, 'public'))); // link static files
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
