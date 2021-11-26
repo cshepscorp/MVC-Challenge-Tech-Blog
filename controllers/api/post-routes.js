@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const { Post, User, Comment } = require('../../models');
 
 // get all posts
 router.get('/', (req, res) => {
@@ -13,15 +13,15 @@ router.get('/', (req, res) => {
             'created_at'],
         order: [['created_at', 'DESC']], // sort by most recent
         include: [ // Instead of using complex JOIN statements with SQL, we can call on Sequelize's include option to perform the join for us.
-            // {
-            //     model: Comment,
-            //     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-            //     // also include the User model itself so it can attach the username to the comment
-            //     include: {
-            //         model: User,
-            //         attributes: ['username']
-            //     }
-            // },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                // also include the User model itself so it can attach the username to the comment
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
             {
                 model: User,
                 attributes: ['username']
@@ -43,15 +43,15 @@ router.get('/:id', (req, res) => {
         },
         attributes: ['id', 'post_text', 'title', 'created_at'],
         include: [
-            // {
-            //     model: Comment,
-            //     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-            //     // also include the User model itself so it can attach the username to the comment
-            //     include: {
-            //         model: User,
-            //         attributes: ['username']
-            //     }
-            // },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                // also include the User model itself so it can attach the username to the comment
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
             {
                 model: User,
                 attributes: ['username']
