@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "name": "mvc-challenge-tech-blog",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cshepscorp/MVC-Challenge-Tech-Blog.git"
+  },
+  "keywords": [
+    "mvc",
+    "node.js",
+    "mysql",
+    "sequelize"
+  ],
+  "author": "Christina Sheppard",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-alpha.1"
+  },
+  "bugs": {
+    "url": "https://github.com/cshepscorp/MVC-Challenge-Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/cshepscorp/MVC-Challenge-Tech-Blog#readme"
+}
