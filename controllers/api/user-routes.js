@@ -34,7 +34,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
-// POST /api/users
+// POST create a new user
 router.post('/', (req, res) => {
     // expects {username: 'Lernantino', password: 'password1234'}
   User.create({
@@ -48,10 +48,37 @@ router.post('/', (req, res) => {
     });
 });
 
+// verify user during login
+// POST method carries the request parameter in req.body, which makes it a more secure way of transferring data from the client to the server
+router.post('/login', (req, res) => {
+
+    User.findOne({
+        where: {
+          username: req.body.username
+        }
+      }).then(dbUserData => {
+        if (!dbUserData) {
+          res.status(400).json({ message: 'No user with that username exists!' });
+          return;
+        }
+        // Verify user
+        const validPassword = dbUserData.checkPassword(req.body.password);
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect password!' });
+            return;
+          }
+          
+          res.json({ user: dbUserData, message: 'You are now logged in!' });
+          
+      });  
+  
+  })
+
 // PUT /api/users/1
 router.put('/:id', (req, res) => {
     // if req.body has exact key/value pairs to match the model, you can just use `req.body` instead
   User.update(req.body, {
+    individualHooks: true,
     where: {
       id: req.params.id
     }
