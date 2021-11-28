@@ -87,6 +87,17 @@ router.post('/login', (req, res) => {
           });  
         });
   });
+// logout
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end(); // 204 No Content success status response code indicates that a request has succeeded, but that the client doesn't need to navigate away from its current page
+    });
+  }
+  else {
+    res.status(404).end();
+  }
+});
 
 // PUT /api/users/1
 router.put('/:id', (req, res) => {
