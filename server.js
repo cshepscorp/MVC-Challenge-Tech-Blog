@@ -6,8 +6,13 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const path = require('path'); 
 
+// tell Handlebars.js about the helpers file
+const helpers = require('./utils/helpers'); // for help formatting dates
+
 const exphbs = require('express-handlebars');
-const hbs = exphbs.create({});
+
+// pass the helpers to the existing exphbs.create() statement
+const hbs = exphbs.create({ helpers });
 
 const session = require('express-session');
 
@@ -22,6 +27,8 @@ const sess = {
     db: sequelize
   })
 };
+
+
 
 app.use(session(sess));
 
