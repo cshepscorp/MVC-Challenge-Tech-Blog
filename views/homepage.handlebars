@@ -3,8 +3,8 @@
   <li>
     <article class="post">
       <div class="title">
-        <a href="{{post.id}}" target="_blank">{{post.title}}</a>
-        <span>Posted by {{post.user.username}} on {{post.created_at}}</span>
+        <a href="/post/{{post.id}}">{{post.title}}</a>
+        <em><span>Posted by {{post.user.username}} on {{post.created_at}}</span></em>
       </div>
       <div class="meta">
           <span>{{post.post_text}}</span>
