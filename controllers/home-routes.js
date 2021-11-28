@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
         .then(dbPostData => {
           const posts = dbPostData.map(post => post.get({ plain: true }));
           // pass post objects into the homepage template
-          res.render('homepage', { posts });
+          res.render('homepage', { posts, loggedIn: req.session.loggedIn });
         })
         .catch(err => {
           console.log(err);
