@@ -1,4 +1,4 @@
-<article class="post">
+{{!-- <article class="post">
       <div class="title">
         <a href="/post/{{id}}">{{title}}</a>
         <em><span>Posted by {{user.username}} on {{format_date created_at}}</span></em>
@@ -6,4 +6,9 @@
       <div class="meta">
           <span>{{post_text}}</span>
       </div>
-</article>
+</article> --}}
+
+
+    <h5 class="card-title"><a href="/post/{{id}}">{{title}}</a></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><em><span>Posted by {{user.username}} on {{format_date created_at}}</span></em></h6>
+    <p class="card-text">{{post_text}}</p>
