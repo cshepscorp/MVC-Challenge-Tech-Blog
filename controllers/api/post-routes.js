@@ -92,7 +92,8 @@ router.put('/:id', (req, res) => {
     // used the request parameter to find the post, then used the req.body.title value to replace the title of the post
     Post.update(
         {
-            title: req.body.title
+            title: req.body.title,
+            post_text: req.body.post_text
         },
         {
             where: {
