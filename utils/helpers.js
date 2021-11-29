@@ -3,5 +3,9 @@ module.exports = {
       return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
         date
       ).getFullYear()}`;
+    },
+    shorten_string: post_text => {
+      const newString = post_text.substring(0, 255)
+      return newString;
     }
   }
