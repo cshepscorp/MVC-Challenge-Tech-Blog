@@ -7,18 +7,25 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color: #FFF!important;
+    background-color: #333!important;
   }
   
   a {
-    text-decoration: none;
-    color: #225ca3;
+    text-decoration: none!important;
+    color: #ff007f!important;
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
     color: #3486eb;
+    
+  }
+
+  .muted-text {
+    color: #BEBEBE;
+    font-size: 90%;
   }
   
   button {
@@ -65,15 +72,6 @@
     display: block;
   }
   
-  .wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
   header {
     border-bottom: 1px solid #ccc;
     display: flex;
@@ -89,6 +87,10 @@
   main {
     flex: 1;
     padding: 2% 4%;
+  }
+
+  .card {
+    background-color: #484848!important;
   }
   
   .btn-no-style {
@@ -149,14 +151,20 @@
   .comment {
     padding: 1%;
     margin-bottom: 1%;
+    background-color: #BEBEBE;
   }
   
+  .comment-text {
+    color: #808080;
+  }
   .comment:nth-child(odd) {
-    background-color: #fff5eb;
+    background-color: #ececec;
   }
   
   .comment .meta {
-    font-size: 90%;
+    font-size: 80%;
+    font-weight: bold;
+    color:#484848;
     margin-bottom: .5%;
     opacity: .6;
   }
