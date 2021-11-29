@@ -1,9 +1,21 @@
-<ol class="post-list">
+{{!-- <ol class="post-list">
   {{#each posts as |post|}}
   <li>
     {{> post-data post }}
   </li>
   {{/each}}
-</ol>
+</ol> --}}
 
-
+{{#if posts.length}}
+<h2>All Posts</h2>
+{{#each posts as |post|}}
+<div class="card" style="width: 18rem;">
+    
+  <div class="card-body">
+    {{> post-data post }}
+    <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+  </div>
+  
+</div>
+{{/each}}
+{{/if}}
