@@ -17,7 +17,7 @@ Post.init(
         allowNull: false
       },
       post_text: {
-        type: DataTypes.STRING(999),
+        type: DataTypes.STRING(1999),
             allowNull: false,
             validate: {
                 // notEmpty: true, // i think this would also have worked
