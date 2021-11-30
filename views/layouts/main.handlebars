@@ -17,21 +17,18 @@
         </h1>
         <nav>
           {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">logout</button> | 
-        {{else}}
-        <a href="/login">login</a> | 
-        {{/if}}
+          <button id="logout" class="btn-no-style">logout</button> | 
+          {{else}}
+          <a href="/login">login</a> | 
+          {{/if}}
           <a href="/">home</a> |
           <a href="/dashboard">dashboard</a>
-        
         </nav>
-  </header>
+    </header>
     <main>
       <div class="container">
         <div class="row">
-            
-      {{{ body }}}
-            
+          {{{ body }}}
         </div>
       </div>
     </main>
