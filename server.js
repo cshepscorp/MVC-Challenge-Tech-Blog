@@ -21,14 +21,13 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sess = {
   secret: process.env.SS,
   cookie: {},
+  maxAge: 300000, // 5 min
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
   })
 };
-
-
 
 app.use(session(sess));
 

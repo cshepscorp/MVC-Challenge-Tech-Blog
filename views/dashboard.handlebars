@@ -16,9 +16,9 @@
 </section>
 
 {{#if posts.length}}
-<h2>My Posts</h2>
+<h2 class="m-3">My Posts</h2>
 {{#each posts as |post|}}
-<div class="card" style="width: 18rem;">
+<div class="card p-2 m-2 rounded" >
     
   <div class="card-body">
     {{> post-data post }}

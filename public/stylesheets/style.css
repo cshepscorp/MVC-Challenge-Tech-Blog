@@ -13,14 +13,13 @@
   
   a {
     text-decoration: none!important;
-    color: #ff007f!important;
+    color: #abcbff!important;
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
-    
+    color: #73a6f9!important;
   }
 
   .muted-text {
@@ -32,7 +31,8 @@
     background-color: #225ca3;
     border: 0;
     padding: 1%;
-    color: white;
+    text-transform:uppercase;
+    color: #fff!important;
     font-weight: bold;
     transition: background-color .1s;
     cursor: pointer;
@@ -40,6 +40,7 @@
   }
   
   button:hover {
+    color: #73a6f9!important;
     background-color: #3486eb;
   }
   
@@ -60,7 +61,7 @@
   }
   
   textarea {
-    min-width: 40%;
+    min-width: 80%;
     min-height: 100px;
   }
   
@@ -73,24 +74,36 @@
   }
   
   header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #666;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1%;
+    padding: 1% 2% 0 2%;
+  }
+
+  header a {
+    text-transform:uppercase;
+    font-weight: 200;
+  }
+
+  header button {
+    text-transform:uppercase;
+    font-weight: 200!important;
+    color: #abcbff!important;
   }
   
   header h1 {
-    font-size: 1em;
+    font-size: 1.5em;
   }
   
   main {
     flex: 1;
-    padding: 2% 4%;
+    padding: 2% 1%;
   }
 
   .card {
     background-color: #484848!important;
+    width: 19rem!important;
   }
   
   .btn-no-style {
@@ -178,7 +191,7 @@
   }
   
   footer {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #777;
     display: flex;
     justify-content: center;
     padding: 1%;
