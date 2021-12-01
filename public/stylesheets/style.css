@@ -106,17 +106,14 @@
     width: 19rem!important;
   }
   
-  .btn-no-style {
+  .btn-link {
     background: none;
-    border: none;
     padding: 0;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: none!important;
     color: #225ca3;
-    font-size: 100%;
-    font-weight: bold;
     transition: color .1s;
-    margin-left: 16px;
+    /* margin-left: 16px; */
   }
   
   .btn-no-style:hover {
@@ -124,12 +121,13 @@
     color: #3486eb;
   }
   
-  .delete-post-btn {
+  .delete-btn {
+    color:honeydew;
     background-color: #d41414;
   }
   
-  .delete-post-btn:hover {
-    background-color: #ff643d;
+  .delete-btn:hover {
+    background-color: #b40a0a;
   }
   
   .post {
