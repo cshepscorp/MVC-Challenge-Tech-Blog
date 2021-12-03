@@ -1,16 +1,10 @@
-{{!-- <ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
-    {{> post-data post }}
-  </li>
-  {{/each}}
-</ol> --}}
-
-  {{#if posts.length}}
+{{#if posts.length}}
   <div class="d-flex justify-content-between">
     <h2 class="">All Posts</h2>  
+    
     <p class=""><a href='/usersort'>sort by user</a> | <a href='/'>sort by date</a></p>
   </div>
+  {{#if loggedIn}}<p class="go-to-dash"><a href='/usersort'>Go to my Dashboard to create a new post</a></p>{{/if}}
   {{#each posts as |post|}}
 
     <div class="card p-2 m-2 rounded">
