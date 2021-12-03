@@ -24,7 +24,6 @@
   ## Usage
   `source db/schema.sql` to create database from mysql command\
   `use <database-name>;` switch to your newly created database\
-  `node db/seedPosts.js` in command line to populate your database with data\
   `npm start` to run your server 
 
   Use Heroku and the JAWSDB add-on to deploy your blog so users can interact with it. In order to use sessions, update the SS variable in the `server.js` file
