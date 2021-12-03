@@ -15,19 +15,19 @@
 
   <a name="installation"></a>
   ## Installation
-  run `git clone https://github.com/cshepscorp/MVC-Challenge-Tech-Blog.git` to clone onto your machine
-  run `npm install` to install the appropriate packages for this application.
-  You will need access to a mysql database in order to run this package. Don't forget to update credentials in the config/connection.js file with your own.
+  run `git clone https://github.com/cshepscorp/MVC-Challenge-Tech-Blog.git` to clone onto your machine\
+  run `npm install` to install the appropriate packages for this application.\
+  You will need access to a mysql database in order to run this package. Don't forget to update credentials in the config/connection.js file with your own.\
   Once downloaded and successfully installed, feel free to use to create your own blog.
 
   <a name="usage"></a>
   ## Usage
-  `source db/schema.sql` to create database from mysql command
-  `use <database-name>;` switch to your newly created database
-  `node db/seedPosts.js` in command line to populate your database with data
+  `source db/schema.sql` to create database from mysql command\
+  `use <database-name>;` switch to your newly created database\
+  `node db/seedPosts.js` in command line to populate your database with data\
   `npm start` to run your server 
 
-  Use Heroku and the JAWSD add-on to deploy your blog so users can interact with it. In order to use sessions, update the SS variable in the `server.js` file
+  Use Heroku and the JAWSDB add-on to deploy your blog so users can interact with it. In order to use sessions, update the SS variable in the `server.js` file
 
   <a name="license"></a>
   ## License
