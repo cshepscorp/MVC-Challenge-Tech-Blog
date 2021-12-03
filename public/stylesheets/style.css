@@ -202,8 +202,8 @@
     display: none;
   }
 
-  .go-to-dash {
-    
+  .go-to-dash a {
+    color: yellow!important;
   }
 
   @media screen and (max-width:575px) {
