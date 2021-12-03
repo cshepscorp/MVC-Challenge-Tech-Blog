@@ -4,7 +4,7 @@
     
     <p class="sorted"><a href='/usersort'>sort by user</a> | <a href='/'>sort by date</a></p>
   </div>
-  {{#if loggedIn}}<p class="go-to-dash"><a href='/usersort'>Go to my Dashboard to create a new post</a></p>{{/if}}
+  {{#if loggedIn}}<p class="go-to-dash"><a href='/dashboard'>Go to my Dashboard to create a new post</a></p>{{/if}}
   {{#each posts as |post|}}
 
     <div class="card p-2 m-2 rounded">
