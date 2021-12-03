@@ -20,13 +20,12 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
   secret: process.env.SS,
-  cookie: {}, // 5 min
+  cookie: {},
+  maxAge: 300000, // 5 min
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize,
-    //checkExpirationInterval: 5 * 60 * 1000, // The interval at which to cleanup expired sessions in milliseconds.
-    //expiration: 1 * 5 * 60 * 1000  // The maximum age (in milliseconds) of a valid session.
+    db: sequelize
   })
 };
 
