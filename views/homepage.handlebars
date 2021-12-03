@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-between">
     <h2 class="">All Posts</h2>  
     
-    <p class=""><a href='/usersort'>sort by user</a> | <a href='/'>sort by date</a></p>
+    <p class="sorted"><a href='/usersort'>sort by user</a> | <a href='/'>sort by date</a></p>
   </div>
   {{#if loggedIn}}<p class="go-to-dash"><a href='/usersort'>Go to my Dashboard to create a new post</a></p>{{/if}}
   {{#each posts as |post|}}
