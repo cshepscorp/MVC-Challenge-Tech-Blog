@@ -17,6 +17,9 @@ router.get('/', (req, res) => {
           {
             model: User,
             attributes: ['username']
+          },
+          {
+            model: Comment
           }
         ]
       })
@@ -47,6 +50,9 @@ router.get('/', (req, res) => {
             {
               model: User,
               attributes: ['username']
+            },
+            {
+              model: Comment
             }
           ]
         })
