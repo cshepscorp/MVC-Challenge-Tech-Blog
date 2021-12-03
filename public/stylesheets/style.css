@@ -114,6 +114,17 @@
     background-color: #484848!important;
     width: 19rem!important;
   }
+
+  .btn { color: #333!important;}
+  .btn-warning:hover {
+    color: #000!important;
+    background-color: yellow!important;
+  }
+  .btn-danger { color: #fff!important;}
+  .btn-danger:hover {
+    color: #000!important;
+    background-color: rgb(249, 29, 4)!important;
+  }
   
   .btn-link {
     background: none;
