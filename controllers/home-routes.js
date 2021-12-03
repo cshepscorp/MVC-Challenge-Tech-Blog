@@ -18,7 +18,9 @@ router.get('/', (req, res) => {
             model: User,
             attributes: ['username']
           },
-          { model: Comment }
+          {
+            model: Comment
+          }
         ]
       })
         .then(dbPostData => {
@@ -48,6 +50,9 @@ router.get('/', (req, res) => {
             {
               model: User,
               attributes: ['username']
+            },
+            {
+              model: Comment
             }
           ]
         })
