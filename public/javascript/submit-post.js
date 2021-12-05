@@ -1,6 +1,9 @@
 function addClass() {
 	var text = document.getElementById('create-blog');
 	text.classList.remove('hide');
+
+  var button = document.getElementById('create-blog-button');
+  button.remove();
 }
 
 async function newFormHandler(event) {

@@ -14,6 +14,15 @@ Post.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
+User.hasMany(Post, {
+    foreignKey: 'user_id'
+});
+
+/* defining the relationship of the Post model to the User. The constraint we impose here is that a post can belong to one user, but not many users. Again, we declare the link to the foreign key, designated at user_id in the Post model */
+Post.belongsTo(User, {
+    foreignKey: 'user_id'
+});
+
 Post.hasMany(Comment, {
     foreignKey: 'post_id'
 });
