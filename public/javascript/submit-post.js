@@ -1,6 +1,9 @@
 function addClass() {
 	var text = document.getElementById('create-blog');
 	text.classList.remove('hide');
+
+  var createButton = document.getElementById('create');
+	createButton.remove();
 }
 
 async function newFormHandler(event) {
@@ -23,7 +26,7 @@ async function newFormHandler(event) {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      alert('You must enter values for both Title and Body');
     }
   }
   

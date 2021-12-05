@@ -141,6 +141,23 @@
   .delete-btn:hover {
     background-color: #b40a0a;
   }
+
+  .btn-light {
+    color: #222!important;
+  }
+
+  .btn-warning:hover {
+    color: #000!important;
+    background-color: yellow!important;
+    }
+  
+  .btn-danger:hover {
+    color: #000!important;
+  }
+
+  .go-to-dash a {
+      color: yellow!important;
+      }
   
   .post {
     margin-bottom: 2%;
