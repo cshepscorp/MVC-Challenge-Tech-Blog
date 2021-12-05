@@ -20,12 +20,13 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
   secret: process.env.SS,
-  cookie: {},
-  maxAge: 300000, // 5 min
+  cookie: {}, // 5 min
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
+    db: sequelize,
+    //checkExpirationInterval: 5 * 60 * 1000, // The interval at which to cleanup expired sessions in milliseconds.
+    //expiration: 1 * 5 * 60 * 1000  // The maximum age (in milliseconds) of a valid session.
   })
 };
 
@@ -44,4 +45,3 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
   });
-

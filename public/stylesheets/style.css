@@ -108,6 +108,13 @@
   .card {
     background-color: #484848!important;
     width: 19rem!important;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   }
 
   .btn { color: #333!important;}
@@ -123,15 +130,12 @@
   
   .btn-link {
     background: none;
-    border: none;
     padding: 0;
     cursor: pointer;
     text-decoration: none!important;
     color: #225ca3;
-    font-size: 100%;
-    font-weight: bold;
     transition: color .1s;
-    margin-left: 16px;
+    /* margin-left: 16px; */
   }
   
   .btn-link:hover {
@@ -139,12 +143,13 @@
     color: #3486eb;
   }
   
-  .delete-post-btn {
+  .delete-btn {
+    color:honeydew;
     background-color: #d41414;
   }
   
-  .delete-post-btn:hover {
-    background-color: #ff643d;
+  .delete-btn:hover {
+    background-color: #b40a0a;
   }
   
   .post {
