@@ -61,8 +61,4 @@ const seedPosts = async () => {
 
   console.log('\n=================\n');
   console.log('Seeding successful.');
-
-// call the seeding script to seed the table
-seedPosts();
-
-module.exports = { seedPosts };
+};
