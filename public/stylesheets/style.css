@@ -10,6 +10,10 @@
     color: #FFF!important;
     background-color: #333!important;
   }
+
+  nav {
+    font-weight: bold;
+  }
   
   a {
     text-decoration: none!important;
@@ -44,11 +48,6 @@
     background-color: #3486eb;
   }
   
-  .post-list {
-    margin: 0;
-    padding: 0;
-  }
-  
   textarea, input {
     padding: .5%;
     border-radius: 5px;
@@ -57,7 +56,7 @@
   
   textarea:focus, input:focus {
     outline: none;
-    border: 1px solid #3486eb;
+    border: 1px solid yellow;
   }
   
   textarea {
@@ -74,7 +73,7 @@
   }
   
   header {
-    border-bottom: 1px solid #666;
+    border-bottom: 1px dotted #666;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,6 +116,17 @@
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   }
+
+  .btn { color: #333!important;}
+  .btn-warning:hover {
+    color: #000!important;
+    background-color: yellow!important;
+  }
+  .btn-danger { color: #fff!important;}
+  .btn-danger:hover {
+    color: #000!important;
+    background-color: rgb(249, 29, 4)!important;
+  }
   
   .btn-link {
     background: none;
@@ -146,13 +156,7 @@
     margin-bottom: 2%;
     line-height: 150%;
   }
-  
-  .post .title span {
-    font-style: italic;
-    font-size: 90%;
-    color: #7d7d7d;
-  }
-  
+
   .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
@@ -171,6 +175,7 @@
   .comment-text {
     color: #808080;
   }
+  
   .comment:nth-child(odd) {
     background-color: #ececec;
   }
@@ -192,17 +197,51 @@
   }
   
   footer {
-    border-top: 1px solid #777;
+    border-top: 1px dotted #777;
     display: flex;
     justify-content: center;
     padding: 1%;
-    font-size: 110%;
+    font-size: 90%;
   }
 
   .hide {
     display: none;
   }
 
-  .go-to-dash {
-    
+  .go-to-dash a {
+    color: yellow!important;
   }
+
+  @media screen and (max-width:575px) {
+    header {
+        padding: 20px 15px 10px 15px;
+        flex-direction: column;
+    }
+    header h1 {
+        font-size: 2.25em;
+        text-align: center;
+    }
+    .card {
+        flex: 100%;
+        margin-right: 20px;
+    }
+    .hero h2 {
+        font-size: 50px;
+    }
+    .btn-link { 
+      font-size: 1.2em;
+      font-weight: 500!important;
+      text-decoration: none!important;
+    }
+    nav { width: 100%!important;}
+    nav ul {
+        margin: 0 9;
+    }
+    nav a {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .sorted { display: none; }
+}
+
+  

@@ -1,7 +1,7 @@
 {{!-- {{> post-data post }} --}}
-<div class="team-area col-9 justify-content-center">
+<div class="team-area col-sm-12 justify-content-center">
 <article class="post">
-  <div class="title">
+  <div>
     <h3>{{post.title}}</h3>
   </div>
   <div class="muted-text">
@@ -18,9 +18,8 @@
   <div>
     <textarea name="comment-body"></textarea>
   </div>
-
   <div>
-    <button type="submit">add comment</button>
+    <button class="btn btn-warning" type="submit">add comment</button>
   </div>
 </form>
 {{/if}}

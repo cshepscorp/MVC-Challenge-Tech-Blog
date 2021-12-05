@@ -24,7 +24,9 @@ router.get('/', withAuth, (req, res) => { // add withAuth here as our own middlw
             model: User,
             attributes: ['username']
           },
-          { model: Comment }
+          {
+            model: Comment
+          }
         ]
       })
         .then(dbPostData => {

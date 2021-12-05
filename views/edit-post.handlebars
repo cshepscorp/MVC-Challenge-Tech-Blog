@@ -10,27 +10,21 @@
     <div>
       <textarea name="post-text" id="post-text">{{post.post_text}}</textarea>
     </div>
-    {{!-- <div>
-      <input name="post-text" type="text" value="{{post.post_text}}" />
-    </div> --}}
     <div>
       Posted by {{post.user.username}} on {{format_date post.created_at}}
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} Comment(s)</a>
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-btn">Delete post</button>
+    <button class="btn btn-warning" type="submit">Save post</button>
+    <button type="button" class="delete-post-btn btn btn-danger">Delete post</button>
   </form>
 </article>
-
-
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
   </div>
-
   <div>
-    <button type="submit">add comment</button>
+    <button class="btn btn-warning" type="submit">add comment</button>
   </div>
 </form>
 

@@ -1,28 +1,14 @@
 {{#if posts.length}}
-<<<<<<< .merge_file_BHmVWx
-<div class="d-flex justify-content-between">
-=======
   <div class="d-flex justify-content-between">
->>>>>>> .merge_file_1miUrB
     <h2 class="">All Posts</h2>  
-    
-    <p class=""><a href='/usersort'>sort by user</a> | <a href='/'>sort by date</a></p>
-<<<<<<< .merge_file_BHmVWx
-</div>
-
-{{#each posts as |post|}}
-=======
+    <p class="sorted"><a href='/usersort'>sort by user</a> | <a href='/'>sort by date</a></p>
   </div>
-  {{#if loggedIn}}<p class="go-to-dash"><a href='/usersort'>Go to my Dashboard to create a new post</a></p>{{/if}}
+  {{#if loggedIn}}<p class="go-to-dash"><a href='/dashboard'>Go to my Dashboard to create a new post</a></p>{{/if}}
   {{#each posts as |post|}}
->>>>>>> .merge_file_1miUrB
-
-<div class="card p-2 m-2 rounded">
-    <div class="card-body">
+    <div class="card p-2 m-2 rounded">
+      <div class="card-body">
         {{> post-data post }}
-        {{!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> --}}
+      </div>
     </div>
-</div>
-
-{{/each}}
-{{/if}}
+  {{/each}}
+  {{/if}}
