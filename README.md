@@ -1,6 +1,8 @@
 
   
   # MVC Challenge Tech Blog ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+  
+  <img src='./public/images/MVC-blog-screenshot.jpg'>
 
   ## Table of Contents
   * [ Description ](#about)
